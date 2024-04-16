@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "sellArtvibe": "Sell on ArtVibe",
+    "catalog": "Catalog",
+    "search": "Search products",
+    "login": "Login",
+    "profile": "Profile",
+    "wishes": "Wishes",
+    "cart": "Cart",
+    "theme": "Theme",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System",
+    "categories": "Categories"
+  },
+  "footer": {
+    "forUsers": "For users",
+    "contactUs": "Contact us",
+    "helpCenter": "Help center",
+    "forCreators": "For creators",
+    "createStore": "Create store",
+    "sellOnArtVibe": "Sell on ArtVibe",
+    "socialMedia": "ArtVibe Social Media",
+    "privacyPolicy": "Privacy policy",
+    "useTerm": "Terms of use",
+    "secured": "All rights secured"
+  },
+  "home": {
+    "recommend": "Recommended",
+    "more": "Show more",
+    "lowPrice": "Low prices",
+    "new": "New products"
+  }
+}

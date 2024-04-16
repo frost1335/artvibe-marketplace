@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "sellArtvibe": "Продать на ArtVibe",
+    "catalog": "Каталог",
+    "search": "Поиск продуктов",
+    "login": "Войти",
+    "profile": "Профиль",
+    "wishes": "Избранное",
+    "cart": "Корзина",
+    "theme": "Тема",
+    "light": "Светлая тема",
+    "dark": "Темная тема",
+    "system": "Системная",
+    "categories": "Категории"
+  },
+  "footer": {
+    "forUsers": "Для пользователей",
+    "contactUs": "Связаться с нами",
+    "helpCenter": "Центр помощи",
+    "forCreators": "Для создателей",
+    "createStore": "Создать магазин",
+    "sellOnArtVibe": "Продать на ArtVibe",
+    "socialMedia": "ArtVibe в социальных сетях",
+    "privacyPolicy": "Политика конфиденциальности",
+    "useTerm": "Условия использования",
+    "secured": "Все права защищены"
+  },
+  "home": {
+    "recommend": "Рекомендуемые",
+    "more": "Показать больше",
+    "lowPrice": "Низкие цены",
+    "new": "Новые продукты"
+  }
+}

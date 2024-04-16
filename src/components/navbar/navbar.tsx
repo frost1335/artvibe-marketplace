@@ -6,7 +6,7 @@ import { CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
 import UserLogin from "./user-login";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar({ resorces }: { resorces: any }) {
     return (
         <nav className="py-4">
             <div className="container">
@@ -16,19 +16,19 @@ export default function Navbar() {
                     </Link>
 
                     <div className="flex items-center gap-x-3">
-                        <Catalog />
+                        <Catalog resorces={resorces} />
 
-                        <Search />
+                        <Search resorces={resorces} />
                     </div>
 
                     <div className="flex items-center gap-x-4">
-                        <UserLogin />
+                        <UserLogin resorces={resorces} />
 
                         <Link href={'/uz/wishes'}>
                             <Button variant={'outline'} className="p-1.5" asChild>
                                 <div className="flex items-center gap-x-2">
                                     <CiHeart className="text-lg" />
-                                    <span className="text-sm hidden lg:block">Wishes</span>
+                                    <span className="text-sm hidden lg:block">{resorces.navbar.wishes}</span>
                                 </div>
                             </Button>
                         </Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
                             <Button variant={'outline'} className="p-1.5" asChild>
                                 <div className="flex items-center gap-x-2">
                                     <CiShoppingCart className="text-lg" />
-                                    <span className="text-sm hidden lg:block">Cart</span>
+                                    <span className="text-sm hidden lg:block">{resorces.navbar.cart}</span>
                                 </div>
                             </Button>
                         </Link>

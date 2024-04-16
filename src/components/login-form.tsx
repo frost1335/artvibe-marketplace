@@ -73,7 +73,7 @@ export default function LoginForm() {
                 getCode ? (
                     <div>
                         <button onClick={onBackward} className="w-6 h-6 flex items-center justify-center rounded-full bg-zinc-300 absolute -top-3 left-0">
-                            <GoArrowLeft />
+                            <GoArrowLeft className="text-zinc-500" />
                         </button>
                         <h2 className="text-2xl font-medium mb-3">
                             Kodni kiriting

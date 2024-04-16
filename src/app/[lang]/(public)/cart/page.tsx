@@ -1,10 +1,19 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import CartItem from "./_components/cart-item"
 import EmptyState from "./_components/empty-state"
 import PopularProducts from "./_components/popular-products"
+import { useRouter } from "next/navigation"
 
-export default function page() {
+export default function Page() {
+    const router = useRouter()
+
     const cartProducts = [1]
+
+    const onCheckout = () => {
+        router.push('/uz/checkout')
+    }
 
     return (
         <div>
@@ -21,7 +30,7 @@ export default function page() {
                         <div className="hidden lg:block sticky top-6 h-min p-5 border border-zinc-300 dark:border-zinc-500 rounded-md">
                             <h3 className="font-semibold mb-4">Your order</h3>
                             <p className="flex items-center justify-between text-sm mb-6">Products ({3}): <span>250 00So&apos;m</span></p>
-                            <Button size={'lg'} className="w-full">
+                            <Button onClick={onCheckout} size={'lg'} className="w-full">
                                 Checkout
                             </Button>
                         </div>
@@ -42,7 +51,7 @@ export default function page() {
                         </p>
 
                     </div>
-                    <Button size={'lg'}>
+                    <Button onClick={onCheckout} size={'lg'}>
                         Checkout
                     </Button>
                 </div>

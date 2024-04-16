@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "sellArtvibe": "ArtVibeda soting",
+    "catalog": "Katalog",
+    "search": "Mahsulotlarni izlash",
+    "login": "Kirish",
+    "profile": "Profil",
+    "wishes": "Saralangan",
+    "cart": "Savat",
+    "theme": "Mavzu",
+    "light": "Yorqin mavzu",
+    "dark": "Qora mavzu",
+    "system": "Qurilmadagiday",
+    "categories": "Kategoryalar"
+  },
+  "footer": {
+    "forUsers": "Foydalanuvchilar uchun",
+    "contactUs": "Biz bilan bog'laning",
+    "helpCenter": "Yordam oling",
+    "forCreators": "Ijodkorlar uchun",
+    "createStore": "Do'kon ochish",
+    "sellOnArtVibe": "ArtVibeda soting",
+    "socialMedia": "ArtVibe Ijtimoiy Tarmoqlari",
+    "privacyPolicy": "Maxfiylik kelishuvi",
+    "useTerm": "Foydalanuvchi kelishuvi",
+    "secured": "Barcha huquqlar himoyalangan"
+  },
+  "home": {
+    "recommend": "Tavsiyalar",
+    "more": "Yana ko'rsatish",
+    "lowPrice": "Arzon narxlar",
+    "new": "Yangi mahsulotlar"
+  }
+}

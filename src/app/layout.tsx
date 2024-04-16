@@ -4,8 +4,14 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner"
+import LocaleRedirect from "@/components/lang-redirect";
+import { Locale, i18n } from "@/i18n.config";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export async function generateStaticParams() {
+  return i18n.locales.map(locale => ({ lang: locale }))
+}
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,11 +20,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale }
 }>) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -26,6 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <LocaleRedirect />
           {children}
           <Toaster />
         </ThemeProvider>

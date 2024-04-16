@@ -11,7 +11,7 @@ import { Button } from "../ui/button"
 import LoginForm from "../login-form"
 
 
-export default function UserLogin() {
+export default function UserLogin({ resorces }: { resorces: any }) {
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -19,7 +19,7 @@ export default function UserLogin() {
                     <div className="flex items-center gap-x-2">
                         <CiUser className="text-lg" />
                         <span className="text-sm hidden lg:block">
-                            Login
+                            {true ? resorces.navbar.login : resorces.navbar.profile}
                         </span>
                     </div>
                 </Button>
