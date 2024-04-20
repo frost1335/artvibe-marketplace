@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -19,14 +18,14 @@ import {
 import { Input } from "@/components/ui/input"
 import { PatternFormat } from "react-number-format"
 
-export default function Settings() {
+export default function Settings({ resources }: any) {
 
     const form = useForm<z.infer<typeof userSchema>>({
         resolver: zodResolver(userSchema),
         defaultValues: {
             firstName: '',
             lastName: '',
-            sureName: '',
+            surname: '',
             email: '',
             gender: undefined,
             birthDate: ''
@@ -48,9 +47,9 @@ export default function Settings() {
                             name="lastName"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Familiya</FormLabel>
+                                    <FormLabel>{resources.user.settings.lastName}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Familiya" {...field} />
+                                        <Input placeholder={resources.user.settings.lastName} {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -61,9 +60,9 @@ export default function Settings() {
                             name="firstName"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Ism</FormLabel>
+                                    <FormLabel>{resources.user.settings.firstName}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Ism" {...field} />
+                                        <Input placeholder={resources.user.settings.firstName} {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -71,12 +70,12 @@ export default function Settings() {
                         />
                         <FormField
                             control={form.control}
-                            name="sureName"
+                            name="surname"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Otasining ismi</FormLabel>
+                                    <FormLabel>{resources.user.settings.surname}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Otasining ismi" {...field} />
+                                        <Input placeholder={resources.user.settings.surname} {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -89,9 +88,9 @@ export default function Settings() {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Elektron pochta</FormLabel>
+                                    <FormLabel>{resources.user.settings.email}</FormLabel>
                                     <FormControl>
-                                        <Input type="email" className="w-min" placeholder="Elektron pochta" {...field} />
+                                        <Input type="email" className="w-min" placeholder={resources.user.settings.email} {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -102,7 +101,7 @@ export default function Settings() {
                             name="birthDate"
                             render={({ field }) => (
                                 <FormItem className="flex flex-col gap-y-2">
-                                    <FormLabel>Tug&apos;ilgan sana</FormLabel>
+                                    <FormLabel>{resources.user.settings.birthDate}</FormLabel>
                                     <FormControl>
                                         <PatternFormat
                                             type="text"
@@ -125,7 +124,7 @@ export default function Settings() {
                             name="gender"
                             render={({ field }) => (
                                 <FormItem className="space-y-3">
-                                    <FormLabel>Jins</FormLabel>
+                                    <FormLabel>{resources.user.settings.gender}</FormLabel>
                                     <FormControl>
                                         <RadioGroup
                                             onValueChange={field.onChange}
@@ -137,7 +136,7 @@ export default function Settings() {
                                                     <RadioGroupItem value={UserGender.MALE} />
                                                 </FormControl>
                                                 <FormLabel className="font-normal py-1.5 cursor-pointer">
-                                                    Erkak
+                                                    {resources.user.settings.male}
                                                 </FormLabel>
                                             </FormItem>
                                             <FormItem className="flex items-center space-x-3 space-y-0">
@@ -145,7 +144,7 @@ export default function Settings() {
                                                     <RadioGroupItem value={UserGender.FEMALE} />
                                                 </FormControl>
                                                 <FormLabel className="font-normal py-1.5 cursor-pointer">
-                                                    Ayol
+                                                    {resources.user.settings.female}
                                                 </FormLabel>
                                             </FormItem>
                                         </RadioGroup>
@@ -157,9 +156,9 @@ export default function Settings() {
                     </div>
                     <div className="flex justify-between gap-x-3 pt-6">
                         <Button size={'lg'} type="button" variant={'secondary'}>
-                            Tizimdan chiqish
+                            {resources.user.settings.logout}
                         </Button>
-                        <Button size={'lg'} type="submit">Submit</Button>
+                        <Button size={'lg'} type="submit">{resources.user.settings.save}</Button>
                     </div>
                 </form>
             </Form>

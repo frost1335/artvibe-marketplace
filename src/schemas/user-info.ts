@@ -9,7 +9,7 @@ export enum UserGender {
 export const userSchema = z.object({
     firstName: z.string().min(1, 'Ism kiritish majburiy'),
     lastName: z.string().min(1, 'Familiya kiritish majburiy'),
-    sureName: z.optional(z.string()),
+    surname: z.optional(z.string()),
     email: z.optional(z.string()),
     gender: z.optional(z.enum([UserGender.MALE, UserGender.FEMALE])),
     birthDate: z.optional(z.string())

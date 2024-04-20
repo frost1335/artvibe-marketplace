@@ -74,5 +74,63 @@
   "popularProducts": "Popular products",
   "wishes": {
     "title": "My wishes"
+  },
+  "user": {
+    "orders": {
+      "empty": "It's empty here :(",
+      "emptySearch": "You have no active orders! Use the search to find everything you need",
+      "buy": "Start buying"
+    },
+    "settings": {
+      "lastName": "Last name",
+      "firstName": "First name",
+      "surname": "Surname",
+      "email": "Email",
+      "birthDate": "Birth date",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "logout": "Logout",
+      "save": "Save"
+    }
+  },
+  "checkout": {
+    "title": "Order checkout",
+    "yourOrder": "Your order",
+    "products": "Products",
+    "goToCart": "Go to cart",
+    "delivery": "Delivery",
+    "deliveryPrice": "free",
+    "total": "Total",
+    "payWithCard": "Pay with card",
+    "agreement": "By placing an order, you agree to the processing of personal data in accordance with the Privacy Agreement and the ArtVibe User Agreement.",
+    "adress": {
+      "title": "Delivery method and adress",
+      "city": "City to deliver",
+      "recieveMethod": "Recieve method",
+      "mail": "Through a mail",
+      "courier": "Courier to door",
+      "zip": "Zip code",
+      "street": "Street",
+      "house": "House",
+      "region": "Region",
+      "apartment": "Apartment/office",
+      "door": "Door",
+      "comment": "Comment for the courier",
+      "commentEg": "For example, where exactly to deliver the order, the nearest address or landmark"
+    },
+    "recipient": {
+      "title": "Recipient of the order",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "notify": "We will send a notification about the status of your order to the phone number you provided. The courier will contact you by phone to clarify the delivery time.",
+      "phone": "Phone number"
+    },
+    "paymentMethod": {
+      "title": "Payment method",
+      "byCard": "By card online",
+      "cash": "Cash or card upon receipt",
+      "payCourier": "Payment to the courier upon receipt of the order"
+    }
   }
 }

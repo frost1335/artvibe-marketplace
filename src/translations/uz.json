@@ -75,5 +75,63 @@
   "popularProducts": "Ommabop mahsulotlar",
   "wishes": {
     "title": "Istaklarim"
+  },
+  "user": {
+    "orders": {
+      "empty": "Hech narsa mavjud emas :(",
+      "emptySearch": "Sizda faol buyurtmalar yo'q! Sizga kerak bo'lgan hamma narsani topish uchun qidiruvdan foydalaning",
+      "buy": "Xarid qilish"
+    },
+    "settings": {
+      "lastName": "Familiya",
+      "firstName": "Ism",
+      "surname": "Otasining ismi",
+      "email": "Elektron pochta",
+      "birthDate": "Tug'ilgan sana",
+      "gender": "Jinsi",
+      "male": "Erkak",
+      "female": "Ayol",
+      "logout": "Tizimdan chiqish",
+      "save": "Saqlash"
+    }
+  },
+  "checkout": {
+    "title": "Buyurtmani rasmiylashtirirsh",
+    "yourOrder": "Buyurtmangiz",
+    "products": "Mahsulotlar",
+    "goToCart": "Savatga o'tish",
+    "delivery": "Yetkazib berish",
+    "deliveryPrice": "bepul",
+    "total": "Hammasi",
+    "payWithCard": "Karta bilan to'lash",
+    "agreement": "Buyurtma berish orqali siz Maxfiylik shartnomasi va ArtVibe foydalanuvchi shartnomasiga muvofiq shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz.",
+    "adress": {
+      "title": "Yetkazib berish usuli va manzili",
+      "city": "Yetkazish uchun shahar",
+      "recieveMethod": "Qabul qilish usuli",
+      "mail": "Pochta orqali",
+      "courier": "Eshikgacha kurer",
+      "zip": "Pochta indeksi",
+      "street": "Ko'cha",
+      "house": "Uy",
+      "region": "Viloyat",
+      "apartment": "Kvartira/ofis",
+      "door": "Eshik",
+      "comment": "Kuryer uchun qo'shimcha sharh",
+      "commentEg": "Masalan, buyurtmani qayerga yetkazib berish kerakligi, eng yaqin manzil yoki belgi"
+    },
+    "recipient": {
+      "title": "Buyurtma oluvchi",
+      "firstName": "Ism",
+      "lastName": "Familiya",
+      "notify": "Siz ko'rsatgan telefon raqamiga buyurtmangiz holati haqida bildirishnoma yuboramiz. Yetkazib berish muddatini aniqlashtirish uchun kurer siz bilan telefon orqali bog'lanadi.",
+      "phone": "Telefon raqami"
+    },
+    "paymentMethod": {
+      "title": "To'lov usuli",
+      "byCard": "Onlayn karta orqali",
+      "cash": "Naqd pul yoki kartani olgandan keyin",
+      "payCourier": "Buyurtmani olgandan keyin kurerga to'lash"
+    }
   }
 }

@@ -12,10 +12,14 @@ import {
 import { GoArrowLeft } from "react-icons/go";
 
 import { toast } from "sonner"
+import { loginFormResources } from "@/translations/client-translations";
+import { useParams } from "next/navigation";
+import { Locale } from "@/i18n.config";
 
 const expireCodeTime = 60 // in seconds
 
 export default function LoginForm() {
+    const { lang }: { lang: Locale } = useParams()
     const [phone, setPhone] = useState()
     const [getCode, setGetCode] = useState(false)
     const [codeSent, setCodeSent] = useState(false)
@@ -43,7 +47,7 @@ export default function LoginForm() {
             toast(
                 <div className="flex items-center gap-x-2 text-sm">
                     <HiExclamationCircle className="text-2xl text-zinc-400" />
-                    Kodni yana {codeExpire} sonyadan so&apos;ng so&apos;rashingiz mumkin
+                    {loginFormResources[lang].resendMsg1} {codeExpire} {loginFormResources[lang].resendMsg2}
                 </div>
             )
         }
@@ -76,10 +80,10 @@ export default function LoginForm() {
                             <GoArrowLeft className="text-zinc-500" />
                         </button>
                         <h2 className="text-2xl font-medium mb-3">
-                            Kodni kiriting
+                            {loginFormResources[lang].enterCode}
                         </h2>
                         <p className="mb-14">
-                            Telefonni tasdiqlash uchun <strong>+998 93 189-73-18</strong> raqamiga 5 xonali kod yuborildi
+                            {loginFormResources[lang].enterCodeSub1} <strong>+998 93 189-73-18</strong> {loginFormResources[lang].enterCodeSub2}
                         </p>
 
                         <div className="flex items-center justify-center mb-16">
@@ -97,13 +101,13 @@ export default function LoginForm() {
                         {
                             codeSent ? (
                                 <p>
-                                    Agar kod kelmasa, siz {codeExpire} soniya orqali yangisini olishingiz mumkin
+                                    {loginFormResources[lang].resendTimer1} {codeExpire} {loginFormResources[lang].resendTimer2}
                                 </p>
                             ) : (
                                 <Button onClick={resendCode} size={'lg'} variant={'ghost'} asChild className="w-full cursor-pointer text-base">
                                     <div className="flex items-center gap-x-2">
                                         <VscDebugRestart />
-                                        Kodni qayta yuborish
+                                        {loginFormResources[lang].resend}
                                     </div>
                                 </Button>
                             )
@@ -112,10 +116,10 @@ export default function LoginForm() {
                 ) : (
                     <div>
                         <h2 className="text-2xl font-medium mb-3">
-                            Telefon raqamingizni kiriting
+                            {loginFormResources[lang].title}
                         </h2>
                         <p className="mb-8">
-                            Tasdiqlash kodini SMS orqali yuboramiz
+                            {loginFormResources[lang].verifyCode}
                         </p>
 
                         <form onSubmit={onSubmit}>
@@ -132,14 +136,12 @@ export default function LoginForm() {
                                 placeholder="+998"
                             />
                             <Button type="submit" className="w-full mb-16" size={'lg'}>
-                                Kodni olish
+                                {loginFormResources[lang].getCode}
                             </Button>
                         </form>
 
                         <p className="text-sm text-center">
-                            Avtotizatsiyadan otish orqali siz <a href="/privacy-policy" className="text-indigo-500">
-                                shaxsiy ma&apos;lumotlarni qayta ishlash siyosatiga rozilik bildirasiz
-                            </a>
+                            {loginFormResources[lang].agreement1} <a href="/privacy-policy" className="text-indigo-500">{loginFormResources[lang].agreement2}</a>
                         </p>
                     </div >
                 )

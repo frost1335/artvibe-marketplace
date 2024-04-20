@@ -11,7 +11,7 @@ export default function Navbar({ resources }: { resources: any }) {
         <nav className="py-4">
             <div className="container">
                 <div className="flex items-center justify-between gap-x-3">
-                    <Link href={'/uz'}>
+                    <Link href={''}>
                         ArtVibe
                     </Link>
 
@@ -24,7 +24,7 @@ export default function Navbar({ resources }: { resources: any }) {
                     <div className="flex items-center gap-x-4">
                         <UserLogin resources={resources} />
 
-                        <Link href={'/uz/wishes'}>
+                        <Link href={'/wishes'}>
                             <Button variant={'outline'} className="p-1.5" asChild>
                                 <div className="flex items-center gap-x-2">
                                     <CiHeart className="text-lg" />
@@ -33,7 +33,7 @@ export default function Navbar({ resources }: { resources: any }) {
                             </Button>
                         </Link>
 
-                        <Link href={'/uz/cart'}>
+                        <Link href={'/cart'}>
                             <Button variant={'outline'} className="p-1.5" asChild>
                                 <div className="flex items-center gap-x-2">
                                     <CiShoppingCart className="text-lg" />
