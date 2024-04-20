@@ -10,11 +10,12 @@ interface LinkProps {
 }
 
 // this link is internationalized link, it has href with correct locale
-export default function Link({ children, ...props }: LinkProps) {
-    const { lang } = useParams()
-    const linkHref = (href: string) => {
-        if (lang) {
-            return `/${lang}${href}`
+export default function Link({ children, className, onClick, href }: LinkProps) {
+    const params = useParams()
+
+    const linkHref = (href: string): string => {
+        if (params.lang) {
+            return `/${params.lang}${href}`
         }
         else {
             return href
@@ -22,6 +23,6 @@ export default function Link({ children, ...props }: LinkProps) {
     };
 
     return (
-        <NativeLink {...props} href={linkHref(props.href)}>{children}</NativeLink>
+        <NativeLink className={className} onClick={onClick} href={linkHref(href)}>{children}</NativeLink>
     )
 }

@@ -1,21 +1,20 @@
 import PopularProducts from "@/components/popular-products";
-import { Locale } from "@/i18n.config";
+import CategoryPage from "./[slug]/page";
 import { getDictionary } from "@/lib/dictionary";
-import SearchPage from "./page";
+import { Locale } from "@/i18n.config";
 
 interface PageProps {
     params: {
         lang: Locale
     },
-    children: React.ReactNode
 }
 
-export default async function layout({ children, params: { lang } }: PageProps) {
+export default async function layout({ params: { lang } }: PageProps) {
     const resources = await getDictionary(lang)
 
     return (
         <div>
-            <SearchPage resources={resources} />
+            <CategoryPage resources={resources} />
             <PopularProducts resources={resources} />
         </div>
     )

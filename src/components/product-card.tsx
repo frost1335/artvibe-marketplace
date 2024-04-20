@@ -8,16 +8,24 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "@/components/ui/link"
 import { Button } from "./ui/button"
-import { MdAddShoppingCart } from "react-icons/md"
 import { FaFire } from "react-icons/fa6"
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io"
 import { BsCartPlus } from "react-icons/bs"
+import { useParams } from "next/navigation"
 
 export default function ProductCard() {
+    const { lang } = useParams()
+
+    const review = lang === 'uz' ? 'ta sharh' : (
+        lang === 'en' ? "review" : 'отзыв'
+    )
+
+    console.log('test');
+
     return (
-        <Link href={'/uz/product/123'}>
+        <Link href={'/product/123'}>
             <Card className="hover:shadow-md hover:dark:shadow-zinc-700 border-none transition-all">
                 <CardHeader className="p-0 pb-4 relative space-y-0">
                     <CardTitle className="sr-only">Beatiful T-shirt - Basketball</CardTitle>
@@ -41,7 +49,7 @@ export default function ProductCard() {
                     <p className="text-zinc-700 dark:text-zinc-300 font-medium text-center">Beatiful T-shirt - Basketball</p>
                     <div className="py-2 flex items-center justify-center gap-x-1">
                         <FaFire className="text-orange-500" />
-                        <h6>5.0 (6 comments)</h6>
+                        <h6>5.0 (6 {review})</h6>
                     </div>
                     <div className="flex items-center justify-center gap-x-2">
                         <span className="block w-4 h-4 rounded-full bg-gray-600" />

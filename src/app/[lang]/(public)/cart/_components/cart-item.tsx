@@ -12,7 +12,7 @@ import {
 import { MdCheck } from "react-icons/md";
 import Link from "next/link";
 
-export default function CartItem() {
+export default function CartItem({ resources }: any) {
     return (
         <div className="p-5">
             <Link href={`/uz/product/123`}>
@@ -83,7 +83,7 @@ export default function CartItem() {
             </div>
             <div className="flex justify-end">
                 <button className="text-sm text-indigo-500 dark:text-indigo-300">
-                    + Add another item
+                    + {resources.cart.addItem}
                 </button>
             </div>
         </div>

@@ -14,12 +14,21 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/i18n.config";
 
-export default function Page({ resources }: any) {
+interface PageProps {
+    params: {
+        lang: Locale
+    },
+}
+
+export default async function page({ params: { lang } }: PageProps) {
+    const resources = await getDictionary(lang)
 
     return (
         <div className="container py-8">
-            <h2 className="text-2xl text-zinc-700 dark:text-zinc-300 font-semibold mb-6 flex items-center gap-x-1">Hoodies</h2>
+            <h2 className="text-2xl text-zinc-700 dark:text-zinc-300 font-semibold mb-6 flex items-center gap-x-1">{resources.category.all}</h2>
 
             <div className="py-6 flex items-center gap-x-2">
                 <p>{resources.category.search}:</p>

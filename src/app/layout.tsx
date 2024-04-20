@@ -4,7 +4,6 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner"
-import LocaleRedirect from "@/components/lang-redirect";
 import { Locale, i18n } from "@/i18n.config";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,7 +33,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LocaleRedirect />
+          {/* <LocaleRedirect /> */}
           {children}
           <Toaster />
         </ThemeProvider>

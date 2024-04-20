@@ -1,37 +1,37 @@
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import { CiInstagram, CiYoutube } from "react-icons/ci";
 import { PiTelegramLogo } from "react-icons/pi";
 
-export default function Footer({ resorces }: { resorces: any }) {
+export default function Footer({ resources }: { resources: any }) {
     return (
         <footer className="bg-zinc-100 dark:bg-zinc-800">
             <div className="container">
                 <div className="flex flex-wrap items-start justify-between py-10">
                     <ul className="space-y-2">
                         <li>
-                            <h4 className="text-sm font-semibold text-zinc-600">{resorces.footer.forUsers}</h4>
+                            <h4 className="text-sm font-semibold text-zinc-600">{resources.footer.forUsers}</h4>
                         </li>
                         <li>
-                            <Link className="text-sm text-zinc-400" href={'/'}>{resorces.footer.contactUs}</Link>
+                            <Link className="text-sm text-zinc-400" href={'/'}>{resources.footer.contactUs}</Link>
                         </li>
                         <li>
-                            <Link className="text-sm text-zinc-400" href={'/'}>{resorces.footer.helpCenter}</Link>
-                        </li>
-                    </ul>
-                    <ul className="space-y-2">
-                        <li>
-                            <h4 className="text-sm font-semibold text-zinc-600">{resorces.footer.forCreators}</h4>
-                        </li>
-                        <li>
-                            <Link className="text-sm text-zinc-400" href={'/'}>{resorces.footer.createStore}</Link>
-                        </li>
-                        <li>
-                            <Link className="text-sm text-zinc-400" href={'/'}>{resorces.footer.sellOnArtVibe}</Link>
+                            <Link className="text-sm text-zinc-400" href={'/'}>{resources.footer.helpCenter}</Link>
                         </li>
                     </ul>
                     <ul className="space-y-2">
                         <li>
-                            <h4 className="text-sm font-semibold text-zinc-600">{resorces.footer.socialMedia}</h4>
+                            <h4 className="text-sm font-semibold text-zinc-600">{resources.footer.forCreators}</h4>
+                        </li>
+                        <li>
+                            <Link className="text-sm text-zinc-400" href={'/'}>{resources.footer.createStore}</Link>
+                        </li>
+                        <li>
+                            <Link className="text-sm text-zinc-400" href={'/'}>{resources.footer.sellOnArtVibe}</Link>
+                        </li>
+                    </ul>
+                    <ul className="space-y-2">
+                        <li>
+                            <h4 className="text-sm font-semibold text-zinc-600">{resources.footer.socialMedia}</h4>
                         </li>
                         <li>
                             <div className="flex items-center gap-x-4">
@@ -51,14 +51,14 @@ export default function Footer({ resorces }: { resorces: any }) {
                 <div className="border-t border-t-zinc-400 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-x-4">
                         <Link className="text-sm font-medium text-zinc-700" href={'/policy-privacy'}>
-                            {resorces.footer.privacyPolicy}
+                            {resources.footer.privacyPolicy}
                         </Link>
                         <Link className="text-sm font-medium text-zinc-700" href={'/terms-of-use'}>
-                            {resorces.footer.useTerm}
+                            {resources.footer.useTerm}
                         </Link>
                     </div>
                     <p className="text-xs text-zinc-600">
-                        «2024© ООО «ARTVIBE MARKET». ИНН 309376127. {resorces.footer.secured}»
+                        «2024© ООО «ARTVIBE MARKET». ИНН 309376127. {resources.footer.secured}»
                     </p>
                 </div>
             </div>

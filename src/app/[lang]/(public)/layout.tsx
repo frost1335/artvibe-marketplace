@@ -13,15 +13,15 @@ interface LayoutProps {
 }
 
 export default async function Layout({ children, params: { lang } }: LayoutProps) {
-    const resorces = await getDictionary(lang)
+    const resources = await getDictionary(lang)
 
     return (
         <>
-            <TopNavbar resorces={resorces} />
-            <Navbar resorces={resorces} />
+            <TopNavbar resources={resources} />
+            <Navbar resources={resources} />
             <GoTop />
             {children}
-            <Footer resorces={resorces} />
+            <Footer resources={resources} />
         </>
     )
 };

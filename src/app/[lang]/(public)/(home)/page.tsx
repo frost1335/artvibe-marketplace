@@ -11,15 +11,15 @@ export default async function Home({ params: { lang } }: {
         lang: Locale
     }
 }) {
-    const resorces = await getDictionary(lang)
+    const resources = await getDictionary(lang)
 
     return (
         <div>
             <Header />
-            <Recommended resorces={resorces} />
-            <LowPrice resorces={resorces} />
+            <Recommended resources={resources} />
+            <LowPrice resources={resources} />
             <Banner />
-            <NewProducts resorces={resorces} />
+            <NewProducts resources={resources} />
         </div>
     )
 };

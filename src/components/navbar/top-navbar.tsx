@@ -14,7 +14,7 @@ import { useTheme } from "next-themes"
 import Link from "next/link"
 import LangSwitcher from "./lang-switcher"
 
-export default function TopNavbar({ resorces }: { resorces: any }) {
+export default function TopNavbar({ resources }: { resources: any }) {
     const { setTheme } = useTheme()
 
     return (
@@ -23,7 +23,7 @@ export default function TopNavbar({ resorces }: { resorces: any }) {
                 <div className="flex items-center justify-between py-1">
                     <div>
                         <Link href="/uz" className="text-sm text-indigo-500 font-medium">
-                            {resorces.navbar.sellArtvibe}
+                            {resources.navbar.sellArtvibe}
                         </Link>
                     </div>
 
@@ -38,7 +38,7 @@ export default function TopNavbar({ resorces }: { resorces: any }) {
                                         <MoonIcon className="absolute top-0 left-0 h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                                     </div>
                                     <span className="block text-sm text-zinc-700 dark:text-zinc-200">
-                                        {resorces.navbar.theme}
+                                        {resources.navbar.theme}
                                     </span>
                                     <span className="sr-only">Toggle theme</span>
                                 </Button>
@@ -47,19 +47,19 @@ export default function TopNavbar({ resorces }: { resorces: any }) {
                                 <DropdownMenuItem onClick={() => setTheme("light")}>
                                     <div className="flex items-center gap-x-2">
                                         <SunIcon />
-                                        {resorces.navbar.light}
+                                        {resources.navbar.light}
                                     </div>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem onClick={() => setTheme("dark")}>
                                     <div className="flex items-center gap-x-2">
                                         <MoonIcon />
-                                        {resorces.navbar.dark}
+                                        {resources.navbar.dark}
                                     </div>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem onClick={() => setTheme("system")}>
                                     <div className="flex items-center gap-x-2">
                                         <WiMoonAltFirstQuarter />
-                                        {resorces.navbar.system}
+                                        {resources.navbar.system}
                                     </div>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>

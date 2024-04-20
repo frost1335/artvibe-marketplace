@@ -30,5 +30,50 @@
     "more": "Yana ko'rsatish",
     "lowPrice": "Arzon narxlar",
     "new": "Yangi mahsulotlar"
+  },
+  "product": {
+    "homelink": "Bosh sahifa",
+    "categoryAll": "Kategoriyalar",
+    "author1": "",
+    "author2": "tomonidan",
+    "color": "RANGI",
+    "style": "STILI",
+    "size": "O'LCHAMI",
+    "noSize": "Bu mahsulot uchun o'lcham mavjud emas",
+    "about": "Mahsulot haqida",
+    "comments": "Sharhlar",
+    "allComments": "Barcha sharhlar",
+    "commentCount": "ta sharh",
+    "similars": "O'xshash mahsulotlar",
+    "cartAdd": "Savatga qo'shing"
+  },
+  "category": {
+    "all": "Barcha kategoriyalar",
+    "search": "Bo'yicha qidirish",
+    "new": "Yangi",
+    "popular": "Ommabop",
+    "cheap": "Arzon",
+    "filter": "Filter"
+  },
+  "cart": {
+    "yourCart": "Savatingiz",
+    "cartProduct": "mahsulot",
+    "yourOrder": "Buyurtmangiz",
+    "products": "Mahsulotlar",
+    "checkout": "Rasmiylashtirish",
+    "addItem": "Yana bitta element qo'shish",
+    "popular": "Ommabop mahsulotlar"
+  },
+  "search": {
+    "title": "Qidiruv natijalari",
+    "searchby": "Bo'yicha qidirish",
+    "new": "Yangi",
+    "popular": "Ommabop",
+    "cheap": "Arzon",
+    "filter": "Filter"
+  },
+  "popularProducts": "Ommabop mahsulotlar",
+  "wishes": {
+    "title": "Istaklarim"
   }
 }

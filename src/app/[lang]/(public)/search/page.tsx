@@ -7,21 +7,21 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-export default function page() {
+export default function Page({ resources }: any) {
     return (
         <div className="container py-8">
-            <h2 className="text-2xl text-zinc-700 dark:text-zinc-300 font-semibold mb-6 flex items-center gap-x-1">Results of search</h2>
+            <h2 className="text-2xl text-zinc-700 dark:text-zinc-300 font-semibold mb-6 flex items-center gap-x-1">{resources.search.title}</h2>
 
             <div className="py-6 flex items-center gap-x-2">
-                <p>Search by:</p>
+                <p>{resources.search.searchby}:</p>
                 <Select>
                     <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="Search by" />
+                        <SelectValue placeholder={resources.search.filter} />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem value="popular">Popular</SelectItem>
-                        <SelectItem value="new">New</SelectItem>
-                        <SelectItem value="cheap">Cheap</SelectItem>
+                        <SelectItem value="new">{resources.search.new}</SelectItem>
+                        <SelectItem value="popular">{resources.search.popular}</SelectItem>
+                        <SelectItem value="cheap">{resources.search.cheap}</SelectItem>
                     </SelectContent>
                 </Select>
             </div>

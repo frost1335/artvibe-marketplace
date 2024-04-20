@@ -9,10 +9,8 @@ import {
 } from "@/components/ui/select"
 import { English, Russian, Uzbek } from "@/assets"
 import Image from "next/image"
-import { redirect, useParams, usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { Locale } from "@/i18n.config";
-import Link from "next/link";
 
 interface ILanguage {
     name: string, locale: Locale, icon: React.ReactNode
@@ -46,7 +44,6 @@ export default function LangSwitcher() {
         if (!pathname) return "/";
         const segments = pathname.split("/");
         segments[1] = locale;
-        console.log(segments.join("/"));
         return segments.join("/");
     };
 

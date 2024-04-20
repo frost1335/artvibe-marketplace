@@ -19,8 +19,22 @@ import AddToCart from "./_components/add-to-cart";
 import { BsCheckLg } from "react-icons/bs";
 import { PiWarningDiamond } from "react-icons/pi";
 import SimilarProducts from "./_components/similar-products";
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/i18n.config";
 
-export default function page({ searchParams: { color = 0, product = 0, side = 'front' } }) {
+interface PageProps {
+    searchParams: { color: number, product: number, side: string },
+    params: {
+        lang: Locale
+        slug: string
+    },
+}
+
+export default async function page({ searchParams: { color = 0, product = 0, side = 'front' }, params: { lang, slug } }: PageProps) {
+    const resources = await getDictionary(lang)
+
+    console.log(slug);
+
     return (
         <div id="product">
             <div className="container">
@@ -28,11 +42,11 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                     <Breadcrumb>
                         <BreadcrumbList>
                             <BreadcrumbItem>
-                                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                                <BreadcrumbLink href="/">{resources.product.homelink}</BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
-                                <BreadcrumbLink href="/category">Categories</BreadcrumbLink>
+                                <BreadcrumbLink href="/category">{resources.product.categoryAll}</BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
@@ -45,7 +59,7 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                 <div className="grid grid-cols-2 gap-6">
                     <div className="md:sticky flex lg:justify-end justify-center top-10 h-min bg-transparent">
                         <div className="relative w-full max-h-[700px] max-w-[700px] bg-transparent">
-                            <Image className="aspect-square" src={'https://dynamic.bonfireassets.com/thumb/design-image/ad82734d-642e-49ed-bf59-ec233fc01135/cd9b5836-3f2e-4d4b-9367-e794df948681/900/'} alt="product-img" width={700} height={700} />
+                            <Image className="aspect-square rounded-lg" src={'https://dynamic.bonfireassets.com/thumb/design-image/ad82734d-642e-49ed-bf59-ec233fc01135/cd9b5836-3f2e-4d4b-9367-e794df948681/900/'} alt="product-img" width={700} height={700} />
 
                             <div>
                                 <div className="bg-transparent flex flex-col items-center gap-3 absolute bottom-5 left-1 z-10">
@@ -69,11 +83,11 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
 
                         <div className="flex items-center my-2 gap-x-1.5">
                             <span className="w-6 h-6 block rounded-full bg-zinc-400" />
-                            by Dilrozbek
+                            {resources.product.author1} Dilrozbek {resources.product.author2}
                         </div>
 
                         <div className="lg:my-10 my-4">
-                            <h3 className="font-semibold text-zinc-600 dark:text-zinc-300 mb-3 text-base uppercase font-mono">COLOR</h3>
+                            <h3 className="font-semibold text-zinc-600 dark:text-zinc-300 mb-3 text-base uppercase font-mono">{resources.product.color}</h3>
                             <ul className="flex items-center gap-2">
                                 <li>
                                     <Link href={{ query: { product, side, color: 0 } }} scroll={false} className="relative block border cursor-pointer border-gray-400 p-1 rounded-full">
@@ -103,7 +117,7 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                         </div>
 
                         <div className="lg:my-10 my-4">
-                            <h3 className="font-semibold text-zinc-600 dark:text-zinc-300 mb-3 text-base uppercase font-mono">STYLE<span className="text-xl ml-2">149 000So&apos;m</span></h3>
+                            <h3 className="font-semibold text-zinc-600 dark:text-zinc-300 mb-3 text-base uppercase font-mono">{resources.product.style}<span className="text-xl ml-2">149 000So&apos;m</span></h3>
                             <div className="flex flex-wrap gap-3">
                                 <Link href={{ query: { product: 0, side, color: 0 } }} scroll={false} key={0} className={`${product == 0 ? (
                                     'bg-zinc-100 border-slate-400 dark:bg-zinc-700 dark:border-zinc-200 bg-opacity-80'
@@ -123,7 +137,7 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                         </div>
 
                         <div className="lg:my-10 my-4">
-                            <h3 className="font-semibold text-zinc-600 dark:text-zinc-300 mb-3 text-base uppercase font-mono">SIZE</h3>
+                            <h3 className="font-semibold text-zinc-600 dark:text-zinc-300 mb-3 text-base uppercase font-mono">{resources.product.size}</h3>
                             <div className="flex mb-3 gap-2">
                                 {
                                     true ? (
@@ -141,7 +155,7 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                                         </div>
 
                                     ) : (
-                                        <h4 className="text-zinc-600 dark:text-zinc-300 font-sans flex items-center font-semibold">There is no size for this product<span className="text-2xl text-orange-600 ml-2"><PiWarningDiamond /></span></h4>
+                                        <h4 className="text-zinc-600 dark:text-zinc-300 font-sans flex items-center font-semibold">{resources.product.noSize}<span className="text-2xl text-orange-600 ml-2"><PiWarningDiamond /></span></h4>
                                     )
                                 }
                             </div>
@@ -156,8 +170,8 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                 <div className="mt-10">
                     <Tabs defaultValue="account" className="w-full">
                         <TabsList className="w-full h-16 gap-x-3">
-                            <TabsTrigger value="account" className="text-base py-2 px-4">About</TabsTrigger>
-                            <TabsTrigger value="password" className="text-base py-2 px-4">Comments</TabsTrigger>
+                            <TabsTrigger value="account" className="text-base py-2 px-4">{resources.product.about}</TabsTrigger>
+                            <TabsTrigger value="password" className="text-base py-2 px-4">{resources.product.comments}</TabsTrigger>
                         </TabsList>
                         <TabsContent value="account">
                             <div className="py-10 container max-w-5xl">
@@ -167,7 +181,7 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                         <TabsContent value="password">
                             <div className="py-10 container max-w-5xl">
                                 <h3 className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 py-4 mb-6 border-b border-b-zinc-400">
-                                    All comments, <span className="text-zinc-400 dark:text-zinc-600">{3} comments</span>
+                                    {resources.product.allComments}, <span className="text-zinc-400 dark:text-zinc-600">{3} {resources.product.commentCount}</span>
                                 </h3>
 
                                 <h5>
@@ -187,7 +201,7 @@ export default function page({ searchParams: { color = 0, product = 0, side = 'f
                     </Tabs>
                 </div>
 
-                <SimilarProducts />
+                <SimilarProducts resources={resources as typeof resources} />
             </div>
         </div>
     )

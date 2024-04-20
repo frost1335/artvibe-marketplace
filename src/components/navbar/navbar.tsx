@@ -4,9 +4,9 @@ import Search from "./search";
 
 import { CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
 import UserLogin from "./user-login";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 
-export default function Navbar({ resorces }: { resorces: any }) {
+export default function Navbar({ resources }: { resources: any }) {
     return (
         <nav className="py-4">
             <div className="container">
@@ -16,19 +16,19 @@ export default function Navbar({ resorces }: { resorces: any }) {
                     </Link>
 
                     <div className="flex items-center gap-x-3">
-                        <Catalog resorces={resorces} />
+                        <Catalog resources={resources} />
 
-                        <Search resorces={resorces} />
+                        <Search resources={resources} />
                     </div>
 
                     <div className="flex items-center gap-x-4">
-                        <UserLogin resorces={resorces} />
+                        <UserLogin resources={resources} />
 
                         <Link href={'/uz/wishes'}>
                             <Button variant={'outline'} className="p-1.5" asChild>
                                 <div className="flex items-center gap-x-2">
                                     <CiHeart className="text-lg" />
-                                    <span className="text-sm hidden lg:block">{resorces.navbar.wishes}</span>
+                                    <span className="text-sm hidden lg:block">{resources.navbar.wishes}</span>
                                 </div>
                             </Button>
                         </Link>
@@ -37,7 +37,7 @@ export default function Navbar({ resorces }: { resorces: any }) {
                             <Button variant={'outline'} className="p-1.5" asChild>
                                 <div className="flex items-center gap-x-2">
                                     <CiShoppingCart className="text-lg" />
-                                    <span className="text-sm hidden lg:block">{resorces.navbar.cart}</span>
+                                    <span className="text-sm hidden lg:block">{resources.navbar.cart}</span>
                                 </div>
                             </Button>
                         </Link>

@@ -30,5 +30,49 @@
     "more": "Show more",
     "lowPrice": "Low prices",
     "new": "New products"
+  },
+  "product": {
+    "homelink": "Home",
+    "categoryAll": "Categories",
+    "author1": "by",
+    "author2": "",
+    "color": "COLOR",
+    "style": "STYLE",
+    "size": "SIZE",
+    "noSize": "There is no size for this product",
+    "about": "About",
+    "comments": "Reviews",
+    "allComments": "All reviews",
+    "commentCount": "reviews",
+    "similars": "Similar products",
+    "cartAdd": "Add to cart"
+  },
+  "category": {
+    "all": "All categories",
+    "search": "Search by",
+    "new": "New",
+    "popular": "Popular",
+    "cheap": "Cheap",
+    "filter": "Filter"
+  },
+  "cart": {
+    "yourCart": "Your cart",
+    "cartProduct": "product",
+    "yourOrder": "Your order",
+    "products": "Products",
+    "checkout": "Checkout",
+    "addItem": "Add another item"
+  },
+  "search": {
+    "title": "Results of search",
+    "searchby": "Search by",
+    "new": "New",
+    "popular": "Popular",
+    "cheap": "Cheap",
+    "filter": "Filter"
+  },
+  "popularProducts": "Popular products",
+  "wishes": {
+    "title": "My wishes"
   }
 }
