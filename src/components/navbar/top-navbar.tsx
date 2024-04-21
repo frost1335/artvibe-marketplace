@@ -22,7 +22,7 @@ export default function TopNavbar({ resources }: { resources: any }) {
             <div className="container">
                 <div className="flex items-center justify-between py-1">
                     <div>
-                        <Link href="" className="text-sm text-indigo-500 font-medium">
+                        <Link href="" className="text-sm text-magenta/90 font-medium">
                             {resources.navbar.sellArtvibe}
                         </Link>
                     </div>

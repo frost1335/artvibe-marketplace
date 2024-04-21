@@ -44,7 +44,7 @@ export default async function page({ params: { lang } }: PageProps) {
                 </Select>
             </div>
 
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 md:gap-4 gap-2">
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />

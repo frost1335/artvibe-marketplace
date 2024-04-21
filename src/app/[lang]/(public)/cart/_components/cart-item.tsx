@@ -82,7 +82,7 @@ export default function CartItem({ resources }: any) {
                 ))}
             </div>
             <div className="flex justify-end">
-                <button className="text-sm text-indigo-500 dark:text-indigo-300">
+                <button className="text-sm text-magenta">
                     + {resources.cart.addItem}
                 </button>
             </div>

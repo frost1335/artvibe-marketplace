@@ -59,11 +59,11 @@ export default function Adress({ resources }: { resources: ResourcesProps }) {
 
                     <RadioGroup defaultValue={deliveryMethod} value={deliveryMethod} className="space-y-2">
                         <div onClick={() => setDeliveryMethod('mail')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 w-1/2 px-4 py-3 rounded-lg cursor-pointer">
-                            <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-indigo-600" value="mail" id="mail" />
+                            <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-magenta" value="mail" id="mail" />
                             <Label htmlFor="mail" className="text-lg cursor-pointer">{resources.mail}</Label>
                         </div>
                         <div onClick={() => setDeliveryMethod('courier')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 w-1/2 px-4 py-3 rounded-lg cursor-pointer">
-                            <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-indigo-600" value="courier" id="courier" />
+                            <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-magenta" value="courier" id="courier" />
                             <Label htmlFor="courier" className="text-lg cursor-pointer">{resources.courier}</Label>
                         </div>
                     </RadioGroup>

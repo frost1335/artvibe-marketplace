@@ -6,7 +6,7 @@ export default function EmptyState() {
     return (
         <div className="container">
             <div className="py-28 flex flex-col items-center justify-center gap-y-4">
-                <span className="flex items-center justify-center w-28 h-28 rounded-full shadow-lg bg-gradient-to-r from-indigo-600 to-gray-400">
+                <span className="flex items-center justify-center w-28 h-28 rounded-full shadow-lg bg-gradient-to-r from-magenta to-gray-400">
                     <LiaShoppingBagSolid className="text-5xl text-white" />
                 </span>
                 <h2 className="text-2xl font-semibold">

@@ -24,13 +24,13 @@ export default function Recipient({ resources }: { resources: ResourcesProps }) 
                     <div className="flex items-center gap-x-3 w-full">
                         <div className="space-y-2 w-full">
                             <Label htmlFor="first-name">
-                                {resources.firstName} <span className="text-indigo-600">*</span>
+                                {resources.firstName} <span className="text-magenta">*</span>
                             </Label>
                             <Input id="first-name" />
                         </div>
                         <div className="space-y-2 w-full">
                             <Label htmlFor="last-name">
-                                {resources.lastName} <span className="text-indigo-600">*</span>
+                                {resources.lastName} <span className="text-magenta">*</span>
                             </Label>
                             <Input id="last-name" />
                         </div>
@@ -40,7 +40,7 @@ export default function Recipient({ resources }: { resources: ResourcesProps }) 
                 <p className="w-2/3 text-sm text-zinc-500">{resources.notify}</p>
                 <div className="w-1/2 space-y-2">
                     <Label htmlFor="phone">
-                        {resources.phone} <span className="text-indigo-600">*</span>
+                        {resources.phone} <span className="text-magenta">*</span>
                     </Label>
                     <PatternFormat
                         value={phone}

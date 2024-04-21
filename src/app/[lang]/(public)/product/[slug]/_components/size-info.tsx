@@ -11,7 +11,7 @@ export default function SizeInfo() {
     return (
         <div>
             <Dialog>
-                <DialogTrigger className="text-indigo-500">Size Guide</DialogTrigger>
+                <DialogTrigger className="text-magenta">Size Guide</DialogTrigger>
                 <DialogContent>
                     <DialogHeader>
                         <DialogTitle>Are you absolutely sure?</DialogTitle>

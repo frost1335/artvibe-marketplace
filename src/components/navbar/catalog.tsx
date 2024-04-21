@@ -16,12 +16,24 @@ export default function Catalog({ resources }: { resources: any }) {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant={'secondary'} className="hover:text-indigo-500 hover:bg-indigo-200 dark:hover:bg-indigo-700/50">
-                    <div className="flex items-center gap-x-3">
-                        <GrCatalog className="text-lg" />
-                        {resources.navbar.catalog}
-                    </div>
-                </Button>
+                <div>
+                    <Button variant={'secondary'} className="hidden lg:block hover:text-magenta hover:bg-magenta/15 dark:hover:bg-magenta/20">
+                        <div className="flex items-center gap-x-3">
+                            <GrCatalog className="text-lg" />
+                            <span className="hidden md:block">
+                                {resources.navbar.catalog}
+                            </span>
+                        </div>
+                    </Button>
+                    <li className="lg:hidden flex flex-col items-center justify-center gap-y-1 hover:text-magenta transition">
+                        <span className="text-2xl">
+                            <GrCatalog />
+                        </span>
+                        <p className="text-xs">
+                            {resources.navbar.catalog}
+                        </p>
+                    </li>
+                </div>
             </SheetTrigger>
             <SheetContent side={'left'}>
                 <SheetHeader>
@@ -29,12 +41,12 @@ export default function Catalog({ resources }: { resources: any }) {
                 </SheetHeader>
 
                 <div className="py-6">
-                    <ul className="space-y-4">
+                    <ul className="space-y-3 md:space-y-4">
                         {
                             [1, 2, 3, 4, 5, 6, 7].map((category, index) => (
                                 <Link className="block" key={index} href={`/category/${category}`}>
-                                    <li key={index} className="py-2 hover:text-indigo-600 flex items-center gap-x-3 cursor-pointer transition-all">
-                                        <span className="block w-8 h-8">
+                                    <li key={index} className="py-2 hover:text-magenta/90 flex items-center gap-x-3 cursor-pointer transition-all">
+                                        <span className="block w-6 h-6 md:w-8 md:h-8">
                                             <FcGallery className="w-full h-full" />
                                         </span>
 

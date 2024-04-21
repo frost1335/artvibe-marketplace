@@ -12,7 +12,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
@@ -52,6 +52,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        magenta: '#FF00CC',
+        blue: '#333399',
+        dark: '#121212'
       },
       borderRadius: {
         lg: "var(--radius)",

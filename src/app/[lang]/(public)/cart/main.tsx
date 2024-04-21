@@ -54,7 +54,7 @@ export default function CartPage({ resources }: { resources: ResourcesProps }) {
             <PopularProducts resources={resources} />
 
             <div className="lg:hidden">
-                <div className="fixed flex items-center justify-between bottom-0 left-0 right-0 px-5 py-2.5 bg-white dark:bg-zinc-900 shadow-[0_20px_20px_10px_#444] dark:shadow-[0_20px_20px_10px_#eee] z-30">
+                <div className="fixed flex items-center justify-between bottom-[68px] left-0 right-0 px-5 py-2.5 bg-white dark:bg-zinc-900 border-t border-b z-40">
                     <div className="flex items-start flex-col">
                         <span className="text-xs text-zinc-600 dark:text-zinc-300 font-medium">{resources.cart.yourOrder}</span>
                         <p className="text-lg">

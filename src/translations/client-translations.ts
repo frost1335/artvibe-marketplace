@@ -3,7 +3,7 @@ export const loginFormResources = {
         title: "Enter your phone number",
         verifyCode: "We will send you a verification code via SMS",
         getCode: "Get the code",
-        agreement1: "By opting out",
+        agreement1: "By signing up",
         agreement2: "you agree to the privacy policy",
         enterCode: "Enter the code",
         enterCodeSub1: "A 5-digit code was sent to",

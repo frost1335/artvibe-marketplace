@@ -24,9 +24,9 @@ export default function Search({ resources }: { resources: any }) {
     }
 
     return (
-        <div>
-            <form onSubmit={onSubmit} className="flex items-center">
-                <Input onChange={({ target: { value } }) => setSearch(value)} className="lg:w-[400px] md:w-[250px] rounded-r-none focus-visible:ring-0" placeholder={resources.navbar.search} name="search" id="search" />
+        <div className="flex-1 w-full">
+            <form onSubmit={onSubmit} className="flex items-center w-full">
+                <Input onChange={({ target: { value } }) => setSearch(value)} className="lg:w-[400px] md:w-[100%] max-w-full rounded-r-none focus-visible:ring-0" placeholder={resources.navbar.search} name="search" id="search" />
                 <button className="h-full px-5 py-2.5 bg-zinc-200 dark:bg-zinc-600 text-zinc-700 dark:text-zinc-200 rounded-r-md">
                     <CiSearch />
                 </button>

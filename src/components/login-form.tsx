@@ -141,7 +141,7 @@ export default function LoginForm() {
                         </form>
 
                         <p className="text-sm text-center">
-                            {loginFormResources[lang].agreement1} <a href="/privacy-policy" className="text-indigo-500">{loginFormResources[lang].agreement2}</a>
+                            {loginFormResources[lang].agreement1} <a href="/privacy-policy" className="text-magenta">{loginFormResources[lang].agreement2}</a>
                         </p>
                     </div >
                 )
