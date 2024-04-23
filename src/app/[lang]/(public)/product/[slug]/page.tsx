@@ -42,21 +42,21 @@ export default async function page({ searchParams: { color = 0, product = 0, sid
                     <Breadcrumb>
                         <BreadcrumbList>
                             <BreadcrumbItem>
-                                <BreadcrumbLink href="/">{resources.product.homelink}</BreadcrumbLink>
+                                <BreadcrumbLink className="text-xs" href="/">{resources.product.homelink}</BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
-                                <BreadcrumbLink href="/category">{resources.product.categoryAll}</BreadcrumbLink>
+                                <BreadcrumbLink className="text-xs" href="/category">{resources.product.categoryAll}</BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />
                             <BreadcrumbItem>
-                                <BreadcrumbPage>Product Title</BreadcrumbPage>
+                                <BreadcrumbPage className="text-xs">Product Title</BreadcrumbPage>
                             </BreadcrumbItem>
                         </BreadcrumbList>
                     </Breadcrumb>
                 </div>
 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-2">
                     <div className="md:sticky flex lg:justify-end justify-center top-10 h-min bg-transparent">
                         <div className="relative w-full max-h-[700px] max-w-[700px] bg-transparent">
                             <Image className="aspect-square rounded-lg" src={'https://dynamic.bonfireassets.com/thumb/design-image/ad82734d-642e-49ed-bf59-ec233fc01135/cd9b5836-3f2e-4d4b-9367-e794df948681/900/'} alt="product-img" width={700} height={700} />
@@ -174,12 +174,12 @@ export default async function page({ searchParams: { color = 0, product = 0, sid
                             <TabsTrigger value="password" className="text-base py-2 px-4">{resources.product.comments}</TabsTrigger>
                         </TabsList>
                         <TabsContent value="account">
-                            <div className="py-10 container max-w-5xl">
+                            <div className="py-4 px-0 md:py-10 container max-w-5xl">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cupiditate illum voluptas, eaque quisquam rerum, architecto rem, voluptatem quas quis perferendis enim maiores ad ut facilis exercitationem sed minus excepturi non recusandae? Deleniti, provident. Dolorum provident recusandae quae dolor iusto consequatur a repellat, error laboriosam soluta id, eum voluptate iste aperiam natus corporis quas commodi, eveniet quisquam beatae dolore ipsam quod cumque dolorem? Mollitia non magnam, ducimus unde officia repellendus nihil optio accusamus dolorum labore perspiciatis natus laudantium a maiores eveniet laboriosam beatae, fugiat quaerat libero impedit animi tempora minima! Soluta deserunt, assumenda iste deleniti non repellendus ea quos debitis exercitationem recusandae ratione ut natus ex, voluptate suscipit ipsum odit. Reprehenderit perferendis iusto inventore ipsum! Quia, maiores id a nihil minima blanditiis minus. Id quia eos dignissimos non corrupti quis earum doloremque nulla odit laudantium! Ipsa quaerat tenetur vitae, incidunt dolorem distinctio quasi eligendi esse ex fugiat rerum dignissimos error quibusdam deserunt. Fugit aliquam consequuntur hic, ipsam alias necessitatibus eos id nemo deserunt rerum officia optio dignissimos eum obcaecati qui quidem dolore cumque soluta nostrum veniam ut impedit tempora fuga perferendis? Excepturi ipsam laudantium tempora quaerat asperiores, ducimus cum quo enim architecto fugiat, deleniti, aperiam quas voluptates tenetur amet laboriosam.
                             </div>
                         </TabsContent>
                         <TabsContent value="password">
-                            <div className="py-10 container max-w-5xl">
+                            <div className="py-4 px-0 md:py-10 container max-w-5xl">
                                 <h3 className="text-xl font-semibold text-zinc-700 dark:text-zinc-300 py-4 mb-6 border-b border-b-zinc-400">
                                     {resources.product.allComments}, <span className="text-zinc-400 dark:text-zinc-600">{3} {resources.product.commentCount}</span>
                                 </h3>

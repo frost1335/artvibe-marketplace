@@ -1,5 +1,7 @@
 {
   "navbar": {
+    "home": "Home page",
+    "cabinet": "Profile",
     "sellArtvibe": "Sell on ArtVibe",
     "catalog": "Catalog",
     "search": "Search products",
@@ -76,12 +78,15 @@
     "title": "My wishes"
   },
   "user": {
+    "chooseLang": "Choose language",
     "orders": {
+      "title": "Orders",
       "empty": "It's empty here :(",
       "emptySearch": "You have no active orders! Use the search to find everything you need",
       "buy": "Start buying"
     },
     "settings": {
+      "title": "Settings",
       "lastName": "Last name",
       "firstName": "First name",
       "surname": "Surname",
@@ -132,5 +137,10 @@
       "cash": "Cash or card upon receipt",
       "payCourier": "Payment to the courier upon receipt of the order"
     }
+  },
+  "contacts": {
+    "title": "Contact us",
+    "desc": "Ask our experts a question via a convenient social network chat or phone",
+    "freecall": "the call is free"
   }
 }

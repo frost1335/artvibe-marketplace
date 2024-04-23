@@ -8,18 +8,11 @@ import { Button } from "../ui/button"
 import LoginForm from "../login-form"
 
 
-export default function UserLogin({ resources }: { resources: any }) {
+export default function UserLogin({ resources, children }: { resources: any, children: React.ReactNode }) {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant={'outline'} className="p-1.5 cursor-pointer" asChild>
-                    <div className="flex items-center gap-x-2">
-                        <CiUser className="text-lg" />
-                        <span className="text-sm hidden lg:block">
-                            {true ? resources.navbar.login : resources.navbar.profile}
-                        </span>
-                    </div>
-                </Button>
+                {children}
             </DialogTrigger>
             <DialogContent>
                 <LoginForm />

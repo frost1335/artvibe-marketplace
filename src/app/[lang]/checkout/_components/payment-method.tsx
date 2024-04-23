@@ -21,7 +21,7 @@ export default function PaymentMethod({ resources }: { resources: ResourcesProps
             <h3 className="text-xl text-zinc-700 dark:text-zinc-300 font-semibold flex items-center gap-x-1 pb-6">{resources.title}</h3>
 
             <RadioGroup defaultValue={paymentMethod} value={paymentMethod} className="space-y-2">
-                <div onClick={() => setPatmentMethod('card')} className="space-x-4 bg-zinc-100 dark:bg-zinc-800 w-1/2 px-4 py-3 rounded-lg cursor-pointer">
+                <div onClick={() => setPatmentMethod('card')} className="space-x-4 bg-zinc-100 dark:bg-zinc-800 md:w-1/2 px-4 py-3 rounded-lg cursor-pointer">
                     <div className="flex items-center gap-x-4">
                         <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-magenta" value="card" id="card" />
                         <div>
@@ -35,7 +35,7 @@ export default function PaymentMethod({ resources }: { resources: ResourcesProps
                         </div>
                     </div>
                 </div>
-                <div onClick={() => setPatmentMethod('cash')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 w-1/2 px-4 py-3 rounded-lg cursor-pointer">
+                <div onClick={() => setPatmentMethod('cash')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 md:w-1/2 px-4 py-3 rounded-lg cursor-pointer">
                     <div className="flex items-center gap-x-4">
                         <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-magenta" value="cash" id="cash" />
                         <div>

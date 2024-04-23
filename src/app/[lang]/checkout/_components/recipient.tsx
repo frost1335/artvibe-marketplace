@@ -20,7 +20,7 @@ export default function Recipient({ resources }: { resources: ResourcesProps }) 
             <h3 className="text-xl text-zinc-700 dark:text-zinc-300 font-semibold flex items-center gap-x-1 pb-6">{resources.title}:</h3>
 
             <div className="space-y-6">
-                <div className="space-y-4 w-1/2">
+                <div className="space-y-4 md:w-1/2">
                     <div className="flex items-center gap-x-3 w-full">
                         <div className="space-y-2 w-full">
                             <Label htmlFor="first-name">
@@ -37,8 +37,8 @@ export default function Recipient({ resources }: { resources: ResourcesProps }) 
                     </div>
 
                 </div>
-                <p className="w-2/3 text-sm text-zinc-500">{resources.notify}</p>
-                <div className="w-1/2 space-y-2">
+                <p className="md:w-2/3 md:text-sm text-xs text-zinc-500">{resources.notify}</p>
+                <div className="md:w-1/2 space-y-2">
                     <Label htmlFor="phone">
                         {resources.phone} <span className="text-magenta">*</span>
                     </Label>

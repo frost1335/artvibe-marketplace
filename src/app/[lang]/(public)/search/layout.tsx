@@ -7,10 +7,10 @@ interface PageProps {
     params: {
         lang: Locale
     },
-    children: React.ReactNode
+    children: React.ReactNode,
 }
 
-export default async function layout({ children, params: { lang } }: PageProps) {
+export default async function layout({ params: { lang } }: PageProps) {
     const resources = await getDictionary(lang)
 
     return (

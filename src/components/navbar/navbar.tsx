@@ -25,9 +25,17 @@ export default function Navbar({ resources }: { resources: any }) {
 
                         <Search resources={resources} />
                     </div>
-
                     <div className="hidden lg:flex items-center gap-x-4">
-                        <UserLogin resources={resources} />
+                        <UserLogin resources={resources}>
+                            <Button variant={'outline'} className="p-1.5 cursor-pointer" asChild>
+                                <div className="flex items-center gap-x-2">
+                                    <CiUser className="text-lg" />
+                                    <span className="text-sm hidden lg:block">
+                                        {true ? resources.navbar.login : resources.navbar.profile}
+                                    </span>
+                                </div>
+                            </Button>
+                        </UserLogin>
 
                         <Link href={'/wishes'}>
                             <Button variant={'outline'} className="p-1.5" asChild>

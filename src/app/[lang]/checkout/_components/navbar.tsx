@@ -1,4 +1,6 @@
+import { LogoMain, LogoPrimary } from "@/assets";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -6,8 +8,9 @@ export default function Navbar() {
         <nav className="py-4 shadow-md">
             <div className="container">
                 <div className="flex items-center justify-between gap-x-3">
-                    <Link href={'/uz'}>
-                        ArtVibe
+                    <Link href={'/'} className="">
+                        <Image className="dark:hidden" src={LogoMain} alt="artvibe-logo" width={60} height={38} />
+                        <Image className="hidden dark:block" src={LogoPrimary} alt="artvibe-logo" width={60} height={38} />
                     </Link>
 
 

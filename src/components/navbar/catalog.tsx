@@ -26,7 +26,7 @@ export default function Catalog({ resources }: { resources: any }) {
                         </div>
                     </Button>
                     <li className="lg:hidden flex flex-col items-center justify-center gap-y-1 hover:text-magenta transition">
-                        <span className="text-2xl">
+                        <span className="text-[22px]">
                             <GrCatalog />
                         </span>
                         <p className="text-xs">

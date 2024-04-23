@@ -42,7 +42,7 @@ export default function Adress({ resources }: { resources: ResourcesProps }) {
                         {resources.city}
                     </Label>
                     <Select>
-                        <SelectTrigger value={'almalyk'} id="city-delivery" className="w-1/2">
+                        <SelectTrigger value={'almalyk'} id="city-delivery" className="md:w-1/2">
                             <SelectValue placeholder={resources.city} />
                         </SelectTrigger>
                         <SelectContent>
@@ -58,11 +58,11 @@ export default function Adress({ resources }: { resources: ResourcesProps }) {
                     </Label>
 
                     <RadioGroup defaultValue={deliveryMethod} value={deliveryMethod} className="space-y-2">
-                        <div onClick={() => setDeliveryMethod('mail')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 w-1/2 px-4 py-3 rounded-lg cursor-pointer">
+                        <div onClick={() => setDeliveryMethod('mail')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 md:w-1/2 px-4 py-3 rounded-lg cursor-pointer">
                             <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-magenta" value="mail" id="mail" />
                             <Label htmlFor="mail" className="text-lg cursor-pointer">{resources.mail}</Label>
                         </div>
-                        <div onClick={() => setDeliveryMethod('courier')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 w-1/2 px-4 py-3 rounded-lg cursor-pointer">
+                        <div onClick={() => setDeliveryMethod('courier')} className="flex items-center space-x-4 bg-zinc-100 dark:bg-zinc-800 md:w-1/2 px-4 py-3 rounded-lg cursor-pointer">
                             <RadioGroupItem className="w-5 h-5 scale-125 text-xl text-magenta" value="courier" id="courier" />
                             <Label htmlFor="courier" className="text-lg cursor-pointer">{resources.courier}</Label>
                         </div>
@@ -71,7 +71,7 @@ export default function Adress({ resources }: { resources: ResourcesProps }) {
 
                 {
                     deliveryMethod === 'mail' ? (
-                        <div className="space-y-4 w-1/2">
+                        <div className="space-y-4 md:w-1/2">
                             <div className="space-y-2">
                                 <Label htmlFor="zip-code">
                                     {resources.zip}
@@ -94,7 +94,7 @@ export default function Adress({ resources }: { resources: ResourcesProps }) {
                             </div>
                         </div>
                     ) : (
-                        <div className="space-y-4 w-1/2">
+                        <div className="space-y-4 md:w-1/2">
                             <div className="space-y-2">
                                 <Label htmlFor="region">
                                     {resources.region}

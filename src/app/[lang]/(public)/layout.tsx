@@ -25,9 +25,7 @@ export default async function Layout({ children, params: { lang } }: LayoutProps
 
                 <Navbar resources={resources} />
 
-                <div className="hidden md:block">
-                    <GoTop />
-                </div>
+                <GoTop />
 
                 {children}
                 <Footer resources={resources} />

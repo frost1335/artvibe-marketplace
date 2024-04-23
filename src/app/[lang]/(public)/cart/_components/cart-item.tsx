@@ -14,17 +14,17 @@ import Link from "next/link";
 
 export default function CartItem({ resources }: any) {
     return (
-        <div className="p-5">
+        <div className="p-2 md:p-5">
             <Link href={`/uz/product/123`}>
                 <h3 className="font-semibold mb-3">Product title</h3>
             </Link>
             <div className="flex flex-col divide-zinc-300 divide-y">
 
                 {[1, 2].map((item, index) => (
-                    <div key={index} className="flex flex-col gap-y-4 py-4">
-                        <div className="grid items-center grid-cols-[1fr_1fr_4fr_1fr_2.5fr_1fr] gap-x-4">
-                            <div id="picture">
-                                <Image className="rounded-sm" src={'https://dynamic.bonfireassets.com/thumb/design-image/ad82734d-642e-49ed-bf59-ec233fc01135/cd9b5836-3f2e-4d4b-9367-e794df948681/900/'} alt="cart-item-img" width={60} height={60} />
+                    <div key={index} className="flex flex-col gap-y-4 py-4 relative">
+                        <div className="grid items-center grid-cols-[1fr_1fr_2fr_1fr] md:grid-cols-[1fr_1fr_4fr_1fr_2.5fr_1fr] gap-x-2 md:gap-x-4">
+                            <div id="picture" className="w-[60px] h-[60px]">
+                                <Image className="w-full h-full rounded-sm" src={'https://dynamic.bonfireassets.com/thumb/design-image/ad82734d-642e-49ed-bf59-ec233fc01135/cd9b5836-3f2e-4d4b-9367-e794df948681/900/'} alt="cart-item-img" width={60} height={60} />
                             </div>
                             <div id="quantity" className="w-16">
                                 <Input defaultValue={1} type="number" min={0} max={100} />
@@ -53,12 +53,12 @@ export default function CartItem({ resources }: any) {
                                     </SelectContent>
                                 </Select>
                             </div>
-                            <div id="price" className="flex items-center">
+                            <div id="price" className="flex items-center absolute md:relative bottom-4 md:bottom-0 left-1/2 -translate-x-1/2">
                                 <span className="text-lg text-zinc-700 dark:text-zinc-200 font-medium">
                                     25 000So&apos;m
                                 </span>
                             </div>
-                            <div id="close">
+                            <div id="close" className="absolute md:relative md:bottom-0 bottom-5 right-0 md:right-0">
                                 <button className="w-6 h-6 rounded-full flex items-center justify-center bg-zinc-300 dark:bg-zinc-500">
                                     <RxCross1 className="text-xs" />
                                 </button>
@@ -72,7 +72,7 @@ export default function CartItem({ resources }: any) {
                                     </span>
                                 </button>
                                 <button className="w-8 h-8 rounded-full border border-transparent flex items-center justify-center">
-                                    <span className="w-6 h-6 rounded-full flex items-center justify-center bg-blue-400">
+                                    <span className="w-6 h-6 rounded-full flex items-center justify-center bg-emerald-400">
                                         {/* <MdCheck className="text-white" /> */}
                                     </span>
                                 </button>

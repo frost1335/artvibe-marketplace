@@ -41,7 +41,7 @@ export default function Settings({ resources }: any) {
         <div>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 divide-y border rounded-lg p-6">
-                    <div className="flex gap-x-3">
+                    <div className="flex gap-x-3 flex-wrap gap-y-5">
                         <FormField
                             control={form.control}
                             name="lastName"
@@ -82,7 +82,7 @@ export default function Settings({ resources }: any) {
                             )}
                         />
                     </div>
-                    <div className="flex gap-x-3 pt-6">
+                    <div className="flex gap-x-3 pt-6 flex-wrap gap-y-5">
                         <FormField
                             control={form.control}
                             name="email"
@@ -118,7 +118,7 @@ export default function Settings({ resources }: any) {
                             )}
                         />
                     </div>
-                    <div className="flex gap-x-3 pt-6">
+                    <div className="flex gap-x-3 pt-6 flex-wrap gap-y-5">
                         <FormField
                             control={form.control}
                             name="gender"
@@ -154,7 +154,7 @@ export default function Settings({ resources }: any) {
                             )}
                         />
                     </div>
-                    <div className="flex justify-between gap-x-3 pt-6">
+                    <div className="flex justify-between gap-x-3 pt-6 flex-wrap gap-y-5">
                         <Button size={'lg'} type="button" variant={'secondary'}>
                             {resources.user.settings.logout}
                         </Button>

@@ -1,5 +1,7 @@
 {
   "navbar": {
+    "home": "Bosh sahifa",
+    "cabinet": "Kabinet",
     "sellArtvibe": "ArtVibeda soting",
     "catalog": "Katalog",
     "search": "Mahsulotlarni izlash",
@@ -77,12 +79,15 @@
     "title": "Istaklarim"
   },
   "user": {
+    "chooseLang": "Tilni tanlang",
     "orders": {
+      "title": "Buyurtmalar",
       "empty": "Hech narsa mavjud emas :(",
       "emptySearch": "Sizda faol buyurtmalar yo'q! Sizga kerak bo'lgan hamma narsani topish uchun qidiruvdan foydalaning",
       "buy": "Xarid qilish"
     },
     "settings": {
+      "title": "Sozlamalar",
       "lastName": "Familiya",
       "firstName": "Ism",
       "surname": "Otasining ismi",
@@ -133,5 +138,10 @@
       "cash": "Naqd pul yoki kartani olgandan keyin",
       "payCourier": "Buyurtmani olgandan keyin kurerga to'lash"
     }
+  },
+  "contacts": {
+    "title": "Biz bilan bogʻlanish",
+    "desc": "Mutaxassislarimizga sizga qulay ijtimoiy tarmoq chati yoki telefon orqali savol bering",
+    "freecall": "chaqiruv bepul"
   }
 }

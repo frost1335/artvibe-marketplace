@@ -22,8 +22,6 @@ export default function ProductCard() {
         lang === 'en' ? "review" : 'отзыв'
     )
 
-    console.log('test');
-
     return (
         <Link href={'/product/123'}>
             <Card className="hover:shadow-md hover:dark:shadow-zinc-700 border-none transition-all">

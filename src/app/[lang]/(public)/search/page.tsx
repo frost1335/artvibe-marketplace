@@ -6,11 +6,16 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import SearchPlaceholder from "./_components/search-placeholder";
 
 export default function Page({ resources }: any) {
+
     return (
         <div className="container py-8">
-            <h2 className="text-2xl text-zinc-700 dark:text-zinc-300 font-semibold mb-6 flex items-center gap-x-1">{resources.search.title}</h2>
+            <div className="mb-6">
+                <h2 className="text-2xl text-zinc-700 dark:text-zinc-300 font-semibold flex items-center gap-x-1">{resources.search.title}:</h2>
+                <SearchPlaceholder />
+            </div>
 
             <div className="py-6 flex items-center gap-x-2">
                 <p>{resources.search.searchby}:</p>
