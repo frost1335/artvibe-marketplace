@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner"
 import { Locale, i18n } from "@/i18n.config";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin", 'cyrillic'] });
 
 export async function generateStaticParams() {
   return i18n.locales.map(locale => ({ lang: locale }))

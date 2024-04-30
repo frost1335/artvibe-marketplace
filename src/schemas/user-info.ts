@@ -12,5 +12,5 @@ export const userSchema = z.object({
     surname: z.optional(z.string()),
     email: z.optional(z.string()),
     gender: z.optional(z.enum([UserGender.MALE, UserGender.FEMALE])),
-    birthDate: z.optional(z.string())
+    birthDate: z.optional(z.string()),
 })
