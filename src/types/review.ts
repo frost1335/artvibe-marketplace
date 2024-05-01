@@ -1,5 +1,5 @@
 export interface IReview {
-    _id: string,
+    _id?: string,
     rating: number
     description: string
     orderId: string,

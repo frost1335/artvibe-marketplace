@@ -5,7 +5,7 @@ export enum UserGender {
 }
 
 export interface IUser {
-    _id: string,
+    _id?: string,
     firstName: string,
     lastName: string,
     surname?: string,

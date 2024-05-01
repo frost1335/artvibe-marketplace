@@ -1,5 +1,5 @@
 export interface IProduct {
-    _id: string,
+    _id?: string,
     title: string
     description: string
     styles: IProductStyle[],
@@ -13,7 +13,7 @@ export interface IProduct {
 }
 
 export interface IProductStyle {
-    _id: string,
+    _id?: string,
     name: string,
     colors?: IStyleColor[] | [],
     sellingPrice: number

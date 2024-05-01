@@ -2,7 +2,7 @@ import { IProduct } from "./product";
 import { IStore } from "./store";
 
 export interface IBanner {
-    _id: string,
+    _id?: string,
     title: string,
     picture: string,
     type: 'product' | 'store'
